@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us - Numerus Group</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="layout">
+    <header class="header" id="header">
+      <div class="container">
+        <div class="header-content">
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Numerus Group" class="logo-image">
+          </a>
+          <nav class="desktop-nav">
+            <ul class="nav-list">
+              <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+              <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+              <li class="nav-item">
+                <div class="dropdown-wrapper">
+                  <button class="nav-link" id="sectorsBtn">Sectors
+                    <svg class="chevron" width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                  </button>
+                  <div class="dropdown" id="sectorsDropdown">
+                    <a href="logistics.html" class="dropdown-item"><strong>Logistics</strong><span class="dropdown-subtitle">Al-Estilam Express Cargo Company</span></a>
+                    <a href="automotive.html" class="dropdown-item"><strong>Automotive</strong><span class="dropdown-subtitle">Leading Star Automotive Company</span></a>
+                    <a href="oil-gas.html" class="dropdown-item"><strong>Oil & Gas</strong><span class="dropdown-subtitle">Al-Gharraf Oil Services (AGOS)</span></a>
+                  </div>
+                </div>
+              </li>
+              <li class="nav-item"><a href="partners.html" class="nav-link">Partners</a></li>
+              <li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+            </ul>
+            <a href="contact.html" class="btn btn-primary active">Contact Us <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+          </nav>
+          <button class="mobile-menu-toggle" id="mobileMenuToggle"><span class="hamburger" id="hamburger"><span></span><span></span><span></span></span></button>
+        </div>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <nav class="mobile-nav">
+          <ul class="mobile-nav-list">
+            <li class="mobile-nav-item"><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li class="mobile-nav-item"><a href="about.html" class="mobile-nav-link">About</a></li>
+            <li class="mobile-nav-item">
+              <button class="mobile-nav-link" id="mobileSectorsBtn">Sectors <svg class="chevron" width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button>
+              <div class="mobile-dropdown" id="mobileSectorsDropdown">
+                <a href="logistics.html" class="mobile-dropdown-item"><strong>Logistics</strong><span>Al-Estilam Express Cargo Company</span></a>
+                <a href="automotive.html" class="mobile-dropdown-item"><strong>Automotive</strong><span>Leading Star Automotive Company</span></a>
+                <a href="oil-gas.html" class="mobile-dropdown-item"><strong>Oil & Gas</strong><span>Al-Gharraf Oil Services (AGOS)</span></a>
+              </div>
+            </li>
+            <li class="mobile-nav-item"><a href="partners.html" class="mobile-nav-link">Partners</a></li>
+            <li class="mobile-nav-item"><a href="services.html" class="mobile-nav-link">Services</a></li>
+            <li class="mobile-nav-item"><a href="contact.html" class="mobile-nav-link contact-button active">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="contact-page">
+        <!-- Page Header -->
+        <section class="page-header">
+          <div class="page-header-overlay">
+            <div class="container">
+              <h1 class="page-header-title">Contact Us</h1>
+              <p class="page-header-subtitle">Connect with our global team to explore partnership opportunities</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact Form and Info Section -->
+        <section class="contact-section">
+          <div class="container">
+            <div class="contact-grid">
+              <!-- Contact Form -->
+              <div class="form-container">
+                <h2 class="contact-section-title">Send us a Message</h2>
+                <div class="success-message" id="successMessage" style="display: none;">
+                  Thank you for your message! We'll get back to you soon.
+                </div>
+                <form id="contactForm" class="contact-form">
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="name"
+                      placeholder="Your Name"
+                      required
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      name="email"
+                      placeholder="Email Address"
+                      required
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      type="text"
+                      name="company"
+                      placeholder="Company Name"
+                      class="form-input"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <textarea
+                      name="message"
+                      placeholder="Your Message"
+                      required
+                      rows="6"
+                      class="form-textarea"
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="submit-button">
+                    Send Message
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="5" y1="12" x2="19" y2="12"></line>
+                      <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                  </button>
+                </form>
+              </div>
+
+              <!-- Quick Contact Info -->
+              <div class="info-container">
+                <h2 class="contact-section-title">Quick Contact</h2>
+                <div class="quick-locations">
+                  <a href="https://maps.google.com/?q=33.3128,44.3615" target="_blank" rel="noopener noreferrer" class="quick-card">
+                    <div class="quick-card-header">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#161B52" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                      <div>
+                        <h4>Baghdad, Iraq</h4>
+                      </div>
+                    </div>
+                    <div class="quick-card-content">
+                      <p class="address-line">PO Box 11235</p>
+                      <p class="address-line">Al-Karrada, District 905</p>
+                      <p class="address-line">Street 1, Building 8</p>
+                      <p class="address-line">Baghdad, Iraq</p>
+                      <div class="quick-phones">
+                        <p class="phone-line">M: +964 (790) 190-5157</p>
+                        <p class="phone-line">T: +964 (1) 717-8456 / 7</p>
+                        <p class="phone-line">F: +964 (1) 717-8458</p>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a href="https://maps.google.com/?q=30.5085,47.7804" target="_blank" rel="noopener noreferrer" class="quick-card">
+                    <div class="quick-card-header">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#161B52" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                      <div>
+                        <h4>Basra, Iraq</h4>
+                        <span class="quick-company">Al-Gharraf Oil Services</span>
+                      </div>
+                    </div>
+                    <div class="quick-card-content">
+                      <p class="address-line">Sayed Ameen Street</p>
+                      <p class="address-line">Opposite Alhadara schools</p>
+                      <p class="address-line">Albradeya Basrah, Iraq</p>
+                      <div class="quick-phones">
+                        <p class="phone-line">T: +964 (781) 877-4944</p>
+                        <p class="email-line">E: info@numerusgroup.com</p>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a href="https://maps.google.com/?q=36.1901,44.0091" target="_blank" rel="noopener noreferrer" class="quick-card">
+                    <div class="quick-card-header">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#161B52" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                      <div>
+                        <h4>Erbil, Iraq</h4>
+                        <span class="quick-company">Al-Estilam Express Cargo</span>
+                      </div>
+                    </div>
+                    <div class="quick-card-content">
+                      <p class="address-line">First Italian Village</p>
+                      <p class="address-line">Villa 245</p>
+                      <p class="address-line">Erbil, Kurdistan, Iraq</p>
+                      <div class="quick-phones">
+                        <p class="phone-line">Phone: +964 750 630 8000</p>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a href="https://maps.google.com/?q=36.2101,44.0291" target="_blank" rel="noopener noreferrer" class="quick-card">
+                    <div class="quick-card-header">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#161B52" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                      <div>
+                        <h4>Erbil, Iraq</h4>
+                        <span class="quick-company">Leading Star Automotive</span>
+                      </div>
+                    </div>
+                    <div class="quick-card-content">
+                      <p class="address-line">Kirkuk Road, Qarachnagha</p>
+                      <p class="address-line">Erbil, Kurdistan Iraq</p>
+                      <div class="quick-phones">
+                        <p class="phone-line">Phone: +964 750 353-5638</p>
+                        <p class="phone-line">+964 773 555-5638</p>
+                      </div>
+                    </div>
+                  </a>
+
+                  <a href="https://maps.google.com/?q=25.1850,55.2708" target="_blank" rel="noopener noreferrer" class="quick-card">
+                    <div class="quick-card-header">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#161B52" stroke-width="2">
+                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                        <circle cx="12" cy="10" r="3"></circle>
+                      </svg>
+                      <div>
+                        <h4>Dubai, UAE</h4>
+                      </div>
+                    </div>
+                    <div class="quick-card-content">
+                      <p class="address-line">PO Box 64250</p>
+                      <p class="address-line">Bayswater Tower, Suite 1807</p>
+                      <p class="address-line">Al-Abraj Street, Business Bay</p>
+                      <p class="address-line">Dubai, UAE</p>
+                      <div class="quick-phones">
+                        <p class="phone-line">T: +971 (4) 457-3030</p>
+                        <p class="phone-line">F: +971 (4) 422-8117</p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-grid">
+            <div class="footer-column"><div class="brand-block"><h3 class="brand-name">Numerus Group</h3><p class="brand-tagline">A trusted partner driving sustainable growth in Iraq through world-class partnerships and local expertise.</p></div></div>
+            <div class="footer-column"><h4 class="column-title">Locations</h4><ul class="location-list"><li>Baghdad</li><li>Basra</li><li>Erbil</li><li>UAE</li></ul></div>
+            <div class="footer-column"><h4 class="column-title">Quick Links</h4><ul class="link-list"><li><a href="index.html">Home</a></li><li><a href="about.html">About</a></li><li><a href="sectors.html">Sectors</a></li><li><a href="partners.html">Partners</a></li><li><a href="services.html">Services</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+            <div class="footer-column"><h4 class="column-title">Connect</h4><a href="mailto:info@numerusgroup.com" class="email-link"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>info@numerusgroup.com</a><div class="social-icons"><a href="#" class="social-icon">in</a><a href="#" class="social-icon">f</a><a href="#" class="social-icon">x</a></div></div>
+          </div>
+          <div class="footer-bottom"><div class="footer-bottom-content"><p class="copyright">&copy; 2026 Numerus Group. All rights reserved.</p><div class="legal-links"><a href="terms.html">Terms & Conditions</a><span class="separator">|</span><a href="privacy.html">Privacy Policy</a></div></div></div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <script>
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => { header.classList.toggle('scrolled', window.scrollY > 10); });
+    document.getElementById('mobileMenuToggle').addEventListener('click', () => {
+      document.getElementById('mobileMenu').classList.toggle('show');
+      document.getElementById('hamburger').classList.toggle('open');
+    });
+    document.getElementById('sectorsBtn').addEventListener('click', () => {
+      document.getElementById('sectorsDropdown').classList.toggle('show');
+    });
+    document.getElementById('mobileSectorsBtn').addEventListener('click', () => {
+      document.getElementById('mobileSectorsDropdown').classList.toggle('show');
+    });
+
+    // Contact Form Submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const successMessage = document.getElementById('successMessage');
+      successMessage.style.display = 'block';
+
+      // Reset form after 3 seconds
+      setTimeout(() => {
+        this.reset();
+        successMessage.style.display = 'none';
+      }, 3000);
+    });
+  </script>
+</body>
+</html>
