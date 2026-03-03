@@ -681,7 +681,7 @@ img {
 
 @media (max-width: 768px) {
   .hero {
-    min-height: 60vh;
+    min-height: 70vh;
     padding: var(--space-3xl) 0;
   }
 
@@ -695,16 +695,18 @@ img {
   }
 
   .hero-overlay {
-    background: linear-gradient(180deg,
-      rgba(22, 27, 82, 0.95) 0%,
-      rgba(22, 27, 82, 0.85) 100%
+    background: linear-gradient(to top,
+      rgba(22, 27, 82, 1) 0%,
+      rgba(22, 27, 82, 0.7) 40%,
+      rgba(22, 27, 82, 0.3) 70%,
+      rgba(22, 27, 82, 0.1) 100%
     );
   }
 }
 
 @media (max-width: 480px) {
   .hero {
-    min-height: 50vh;
+    min-height: 65vh;
   }
 
   .hero-cta {
@@ -1200,7 +1202,21 @@ img {
 
 @media (max-width: 640px) {
   .sectors-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: var(--space-md);
+    padding-bottom: var(--space-md);
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .sectors-grid::-webkit-scrollbar {
     display: none;
+  }
+
+  .sector-card {
+    flex: 0 0 85%;
+    scroll-snap-align: center;
   }
 }
 
