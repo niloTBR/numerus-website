@@ -380,6 +380,11 @@
                 </div>
               </a>
             </div>
+            <div class="carousel-dots" id="sectorsDots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+              <span class="dot"></span>
+            </div>
           </div>
         </section>
       </div>
@@ -671,6 +676,64 @@
     }, { threshold: 0.3 });
 
     observer.observe(visionSection);
+
+    // Sectors carousel pagination and auto-scroll
+    const sectorsGrid = document.querySelector('.sectors-grid');
+    const dots = document.querySelectorAll('#sectorsDots .dot');
+
+    if (sectorsGrid && dots.length) {
+      let currentSlide = 0;
+      let autoScrollInterval;
+
+      const updateDots = (index) => {
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+      };
+
+      const scrollToSlide = (index) => {
+        const cardWidth = sectorsGrid.querySelector('.sector-card').offsetWidth + 16;
+        sectorsGrid.scrollTo({ left: index * cardWidth, behavior: 'smooth' });
+        currentSlide = index;
+        updateDots(index);
+      };
+
+      const startAutoScroll = () => {
+        autoScrollInterval = setInterval(() => {
+          currentSlide = (currentSlide + 1) % 3;
+          scrollToSlide(currentSlide);
+        }, 4000);
+      };
+
+      const stopAutoScroll = () => {
+        clearInterval(autoScrollInterval);
+      };
+
+      // Start auto-scroll
+      startAutoScroll();
+
+      // Pause on touch/interaction
+      sectorsGrid.addEventListener('touchstart', stopAutoScroll);
+      sectorsGrid.addEventListener('touchend', () => {
+        setTimeout(startAutoScroll, 3000);
+      });
+
+      sectorsGrid.addEventListener('scroll', () => {
+        const scrollLeft = sectorsGrid.scrollLeft;
+        const cardWidth = sectorsGrid.querySelector('.sector-card').offsetWidth + 16;
+        const activeIndex = Math.round(scrollLeft / cardWidth);
+        currentSlide = activeIndex;
+        updateDots(activeIndex);
+      });
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          stopAutoScroll();
+          scrollToSlide(index);
+          setTimeout(startAutoScroll, 3000);
+        });
+      });
+    }
   </script>
 </body>
 </html>
