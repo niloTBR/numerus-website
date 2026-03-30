@@ -1031,8 +1031,8 @@ img {
 }
 
 .sector-logo {
-  width: 6rem;
-  height: 6rem;
+  width: 8rem;
+  height: 8rem;
   background: white;
   display: flex;
   align-items: center;
@@ -2243,13 +2243,15 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.75rem;
+  gap: 0.25rem;
+  padding: 0.5rem;
+  overflow: hidden;
 }
 
 .ls-lockup-star-v {
-  height: 3.5rem;
+  height: 2.5rem;
   width: auto;
+  flex-shrink: 0;
 }
 
 .ls-lockup-text-v {
