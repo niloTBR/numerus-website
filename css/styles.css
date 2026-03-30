@@ -5815,7 +5815,7 @@ img {
 }
 
 .projects-no-dates .project-row {
-  grid-template-columns: 200px 1fr auto;
+  grid-template-columns: 200px 1fr;
 }
 
 .project-learn-more {
