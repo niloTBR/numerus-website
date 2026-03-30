@@ -3892,6 +3892,28 @@ img {
   color: white;
 }
 
+.service-back-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: #f0f0f0;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.service-back-btn:hover {
+  background: #161B52;
+  color: white;
+}
+
+.service-back-btn svg {
+  flex-shrink: 0;
+}
+
 .capability-card p.capability-desc {
   font-size: 1rem;
   font-weight: 400;
