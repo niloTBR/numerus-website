@@ -1012,7 +1012,7 @@ img {
 .sector-item {
   text-decoration: none;
   color: white;
-  padding: var(--space-xl) var(--space-xl);
+  padding: 0 var(--space-xl) var(--space-xl);
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
   cursor: pointer;
