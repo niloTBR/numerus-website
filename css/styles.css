@@ -3949,12 +3949,13 @@ img {
 
 .legacy-sub-item strong {
   color: var(--color-primary, #161B52);
-  font-size: 0.95rem;
+  font-size: 1.125rem;
 }
 
 .legacy-sub-item span {
   color: #718096;
-  font-size: 0.85rem;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 @media (max-width: 768px) {
