@@ -5927,3 +5927,70 @@ img {
   .criteria-number { font-size: 2.5rem; }
   .services-intro { padding: 1.5rem 0; }
 }
+
+/* Service Detail Pages */
+.service-detail-cards .capability-card {
+  align-items: flex-start;
+}
+
+.service-detail-cards .capability-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0 0;
+}
+
+.service-detail-cards .capability-card ul li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 0.35rem;
+  font-size: 0.95rem;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.service-detail-cards .capability-card ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55em;
+  width: 7px;
+  height: 7px;
+  background: #161B52;
+  border-radius: 50%;
+}
+
+.service-gallery {
+  overflow: hidden;
+  margin: 3rem 0;
+}
+
+.service-gallery-track {
+  display: flex;
+  gap: 1rem;
+}
+
+.service-gallery-track.scrolling {
+  animation: scrollGallery 30s linear infinite;
+}
+
+.service-gallery-track.scrolling:hover {
+  animation-play-state: paused;
+}
+
+.service-gallery-image {
+  flex-shrink: 0;
+  width: calc(25% - 0.75rem);
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+}
+
+.service-gallery-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes scrollGallery {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
